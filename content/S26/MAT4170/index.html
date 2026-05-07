@@ -8,6 +8,13 @@ courseTitle: Introduction to Abstract Algebra I
 <h1 style="margin:0;">{{ courseNumber }}</h1>
 <h4 style="margin:0;">{{ courseTitle }} ({{ term }})</h4>
 
+{% if collections.blog | filterByClass(courseNumber, term) | isNonempty %}
+<h2>Student blog posts</h2>
+<div>
+  Read <a href="blog/">blog posts</a> by abstract algebra students!
+</div>
+{% endif %}
+
 <h2>Assignments</h2>
 <div class="three-column grid by-columns">
 {% for post in collections.all | reverse %}{% if (post.data.courseNumber == courseNumber) and (post.data.term == term) and (post.data.type == "assignment") %}
@@ -27,7 +34,7 @@ courseTitle: Introduction to Abstract Algebra I
 <h3>Other pages</h3>
 <ul>
   <li><a href="group_video/">Group video guidelines</a></li>
-  <li><a href="blog/">Blog post upload instructions</a></li>
+  <li><a href="blog_post/upload_instructions/">Blog post upload instructions</a></li>
   <li><a href="blog_post/">Term paper (blog post)</a></li>
   <li><a href="first_day/">First day symmetry activity</a></li>
 </ul>

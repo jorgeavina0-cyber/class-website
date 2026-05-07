@@ -1,3 +1,8 @@
 ---
 layout: layouts/base.njk
 ---
+<h1 style="margin-bottom:0.2em;">{{title}}</h1>
+<div>By {{ author }}</div>
+<div style="font-size:0.8em;"><i>{{ date | blogDate }}</i></div>
+
+{{ content | safe }}
