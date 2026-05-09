@@ -87,7 +87,7 @@ g & h
 \end{pmatrix}.
 $$
 
-This is not a coincidence. Every Möbius transformation naturally corresponds to a $2\times2$ complex matrix. Interestingly enough, what initially appears to be a complicated rational function is actually deeply connected to linear algebra.
+This is not a coincidence. Every Möbius transformation naturally corresponds to a \(2\times2\) complex matrix. Interestingly enough, what initially appears to be a complicated rational function is actually deeply connected to linear algebra.
 
 ---
 
@@ -97,30 +97,32 @@ Möbius transformations also form a group under composition. Keep in mind a grou
 
 Closure holds because composing two Möbius transformations produces another Möbius transformation.
 
-For any nonzero scalar $\lambda$,
+The identity transformation is simply
 
 $$
-\frac{\lambda az+\lambda b}{\lambda cz+\lambda d}
-=
-\frac{az+b}{cz+d}
+f(z)=z.
 $$
 
-For example,
+Every Möbius transformation also has an inverse:
 
 $$
-\frac{z+1}{z+2}
-=
-\frac{2z+2}{2z+4}
+f^{-1}(z)=\frac{dz-b}{-cz+a}.
+$$
+
+Again, this inverse exists because
+
+$$
+ad-bc\neq0.
 $$
 
 Now, here is where things begin to overlap algebraically. Different matrices can actually define the exact same Möbius transformation. Geometrically nothing changes, however algebraically the matrices appear different.
 
-For any nonzero scalar $\lambda$,
+For any nonzero scalar \(\lambda\),
 
 $$
 \frac{\lambda az+\lambda b}{\lambda cz+\lambda d}
 =
-\frac{az+b}{cz+d}
+\frac{az+b}{cz+d}.
 $$
 
 For example,
@@ -128,7 +130,7 @@ For example,
 $$
 \frac{z+1}{z+2}
 =
-\frac{2z+2}{2z+4}
+\frac{2z+2}{2z+4}.
 $$
 
 At first this may not seem important, however this creates redundancy. One Möbius transformation can have infinitely many matrix representations. Keep in mind mathematicians care about structure and behavior, not duplicate information.
