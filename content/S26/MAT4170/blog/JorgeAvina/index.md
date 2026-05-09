@@ -97,22 +97,20 @@ Möbius transformations also form a group under composition. Keep in mind a grou
 
 Closure holds because composing two Möbius transformations produces another Möbius transformation.
 
-The identity transformation is simply
+For any nonzero scalar $\lambda$,
 
 $$
-f(z)=z.
+\frac{\lambda az+\lambda b}{\lambda cz+\lambda d}
+=
+\frac{az+b}{cz+d}
 $$
 
-Every Möbius transformation also has an inverse:
+For example,
 
 $$
-f^{-1}(z)=\frac{dz-b}{-cz+a}.
-$$
-
-Again, this inverse exists because
-
-$$
-ad-bc\neq0.
+\frac{z+1}{z+2}
+=
+\frac{2z+2}{2z+4}
 $$
 
 Now, here is where things begin to overlap algebraically. Different matrices can actually define the exact same Möbius transformation. Geometrically nothing changes, however algebraically the matrices appear different.
