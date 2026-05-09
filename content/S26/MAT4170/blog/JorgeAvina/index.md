@@ -134,6 +134,7 @@ $$
 $$
 
 At first this may not seem important, however this creates redundancy. One Möbius transformation can have infinitely many matrix representations. Keep in mind mathematicians care about structure and behavior, not duplicate information.
+
 ---
 
 # Quotient Groups and Normal Subgroups
