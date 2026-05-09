@@ -8,15 +8,6 @@ term: S26
 layout: layouts/blog.njk
 ---
 
-\documentclass{article}
-\usepackage[margin=1in]{geometry}
-\usepackage{mathtools, amsfonts, amsthm}
-\usepackage[hybrid]{markdown}
-\usepackage{indentfirst}
-
-\begin{document}
-
-\begin{markdown}
 Introduction
 ============
 
@@ -67,6 +58,3 @@ Normally, we would use the Fourier series or Fourier analysis to solve or approx
 Concluding
 ============
 Without the complex numbers, we would not have such elegant and amazing ways to reduce or simplify problems. We would not get such amazing and beautiful shapes like the Klein bottle, nor would we have solutions to various differential equations that are vital to the field of physics. I have come to appreciate complex numbers more and more since I was younger, and I hope I have provided you, the reader, with valuable insight on why complex numbers are beautiful, and why they are actually the natural extension of our number system. Additionally, we discussed informally the topic of topology, which was this notion of folding the plane in a specific way to represent various points on it. If you have not taken topology, I hope this paper has motivated you to do so. It is a truly rich area of mathematics with so many real-world applications, including the one I have presented to you today.
-\end{markdown}
-
-\end{document}
