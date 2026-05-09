@@ -119,23 +119,19 @@ Now, here is where things begin to overlap algebraically. Different matrices can
 
 For any nonzero scalar $\lambda$,
 
-<div>
 \[
 \frac{\lambda az+\lambda b}{\lambda cz+\lambda d}
 =
 \frac{az+b}{cz+d}
 \]
-</div>
 
 For example,
 
-<div>
 \[
 \frac{z+1}{z+2}
 =
 \frac{2z+2}{2z+4}
 \]
-</div>
 
 At first this may not seem important, however this creates redundancy. One Möbius transformation can have infinitely many matrix representations. Keep in mind mathematicians care about structure and behavior, not duplicate information.
 
