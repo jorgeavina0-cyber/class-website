@@ -3,7 +3,7 @@ title: An Intuitive Introduction to de Rham Cohomology
 author: Jacob Henn
 date: 2026-05-08
 type: blog
-courseNumber: MAT4170
+courseNumber: MAT4200
 term: S26
 layout: layouts/blog.njk
 ---
@@ -14,19 +14,22 @@ One of the most fundamental properties of a shape is its number of holes. Mathem
 
 I'll start by talking about “first-order” de Rham cohomology, which detects the kind of hole seen in the left-hand figure but not the right-hand one:
 
-<img width="2019" height="951" alt="o-c" src="https://gist.github.com/user-attachments/assets/ef6f21ff-ccb0-4c72-9c5d-969ff271fe50" />
+**(Figure 1)**
+<img width="2019" height="951" alt="o-c" src="o-c.png" />
 
 The main idea is to find ways in which a substance like water can _flow_ through the shape that are impossible under gravity alone. Consider the following flows, represented by vector fields:
 
-<img width="2162" height="1025" alt="o-c-fields" src="https://gist.github.com/user-attachments/assets/43b48725-c3c8-4320-ac5a-788b7d071348" />
+**(Figure 2)**
+<img width="2162" height="1025" alt="o-c-fields" src="o-c-fields.png" />
 
 Producing the flow on the right gravitationally is physically possible. For example, you could make a waterslide like this:
 
-<img width="701" height="705" alt="hw07-4 5" src="https://gist.github.com/user-attachments/assets/8baaa374-798f-472f-9fff-8d0711fadbe6" />
+**(Figure 3)**
+<img width="701" height="705" alt="hw07-4 5" src="hw07-4 5.png" />
 
 But water flowing around a _closed_ canal under gravity alone lies in the realm of Escher:
 
-<img width="279" height="356" alt="waterfall" src="https://gist.github.com/user-attachments/assets/65470b7e-ffd1-4f68-a1ff-babd7b87f37a" />
+<img width="279" height="356" alt="waterfall" src="waterfall.png" />
 
 So the impossibility of a perpetually cycling waterway has something to do with the hole that distinguishes a figure O from a figure C.
 
@@ -37,11 +40,11 @@ So far, we have a very loose idea of what we want to do: detect holes in a surfa
 
 Like in the introduction, we’ll think of flows as _vector fields_, which assign an arrow to each point of the surface. And we want these vector fields to be “smooth”—in math language, that means they should have continuous derivatives of every order. In the following figure, the vector field on the left is smooth, while the one on the right is not (note how the vectors point into each other on the left of the right ring and point away from each other on the right; this isn’t a problem on the left ring because they smoothly shrink to 0 before switching directions):
 
-((figure here))
+<img width="1200" height="598" alt="annulus-sinθ" src="annulus-sinθ.png" />
 
 And to formalize the idea of a “landscape” on which the fluid flows under the influence of gravity, we’ll use a *scalar function*, which can be thought of as an elevation map. We’ll graph these like color-coded topographic maps. In the below figure, the function attains its highest value at 2 o’clock and smoothly drops as we move counterclockwise to its lowest value at 4 o’clock.
 
-((figure here))
+<img width="720" height="720" alt="annulus--θ(-x)" src="annulus--θ(-x).png" />
 
 One of the most important ideas behind first-order de Rham cohomology is that there’s a correspondence between landscapes and flows. For a landscape, imagine rolling a ball or spilling water at every point and recording in which direction and how quickly it moves. Those data points can always be turned into a smooth vector field. For the C-shape above, the resulting vector field would look something like the right-hand one in Figure 2.
 
@@ -77,9 +80,19 @@ It takes a bit of work to show this, but if we treat flows that detect the same 
 
 ### 1.3. Examples
 
-## Part 2: 2-forms and second de Rham cohomology
+1. The de Rham cohomology of a space without any holes is trivial—i.e., all flows are equivalent to $0$.
+2. The de Rham cohomology of a ring is the 1-dimensional space of real numbers $\mathbb R$.
+3. In general, the dimension of the cohomology space usually corresponds to the number of holes in the shape. For example, the space shown below has a cohomology of $\mathbb R^3$, the 3d space of triples of real numbers:
+   <img width="918" height="910" alt="triple-o" src="triple-o.png" />
+
+
+## Part 2: Second de Rham cohomology
+
 ### 2.1. Motivation
-### 2.2. Exterior derivative of a 1-form via FTOC
+
+First de Rham cohomology can detect particular kinds of holes, like the hole in a donut. But it can’t distinguish between a solid ball and a hollow sphere. It turns out that “hollowness” is a _higher-dimensional kind of hole_ that we need a higher-dimensional theory to detect. Luckily, there are versions of de Rham cohomology in $n$ dimensions that can detect $n$-dimensional generalized holes. Here, I’ll briefly cover second de Rham cohomology in 2d.
+
+### 2.2. Exterior derivative
 
 The most important property of the derivative is that it’s *dual* to the integral by the fundamental theorem of calculus. This is important for de Rham cohomology theory, even though we haven’t explicitly encountered it yet. In a sense, counting the flows that don’t have a landscape is kind of like counting ways in which a generalized version of the FTOC fails when applied to our space. So to step up to higher dimensions, we want a “higher-order” analogue of the derivative which obeys a version of the FTOC.
 
@@ -103,4 +116,4 @@ $$= \left(\frac{\partial G}{\partial x} - \frac{\partial F}{\partial y}\right) e
 
 You probably recognize that expression as an integrand in Green’s theorem, and that’s exactly what’s going on. In 2d, the second de Rham cohomology detects failures of the 2d FTOC, i.e., Green's theorem. Specifically, the generators—instead of being flows without landscapes—are landscapes without flows, where the derivative taking a flow to a landscape is given by $\frac{\partial G}{\partial x} - \frac{\partial F}{\partial y}$.
 
-### 2.3. Exterior derivative of a 1-form via curl
+This generalizes to higher dimensions as the _exterior derivative_, which essentially is what results from taking the total derivative of a map (which will usually be a higher-rank tensor) and antisymmetrizing in the same way.
